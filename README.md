@@ -33,7 +33,7 @@ For our team of 5, the established Git workflow must be strictly adhered to:
    ```bash
    cp .env.example .env
    ```
-4. Configure your local Oracle database credentials in the `.env` file (`DB_CONNECTION=oracle`, update host, port, username, password).
+4. Verify your local Oracle database credentials in the `.env` file (`DB_CONNECTION=oracle`, update host, port, username, password to match your setup). The `yajra/laravel-oci8` driver is already pre-configured in `config/database.php`.
 5. Generate the local application key:
    ```bash
    php artisan key:generate
