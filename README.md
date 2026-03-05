@@ -33,7 +33,18 @@ For our team of 5, the established Git workflow must be strictly adhered to:
    ```bash
    cp .env.example .env
    ```
-4. Verify your local Oracle database credentials in the `.env` file (`DB_CONNECTION=oracle`, update host, port, username, password to match your setup). The `yajra/laravel-oci8` driver is already pre-configured in `config/database.php`.
+4. Configure your `.env` file with the BricoLink environment settings:
+   - Change the app name: `APP_NAME=BricoLink`
+   - Set the session driver to file (this prevents the server from crashing on the welcome page if your DB is offline): `SESSION_DRIVER=file`
+   - Configure your local Oracle database credentials. The `yajra/laravel-oci8` driver is already pre-configured in `config/database.php`, you just need to set the variables in `.env`:
+     ```env
+     DB_CONNECTION=oracle
+     DB_HOST=127.0.0.1
+     DB_PORT=1521
+     DB_DATABASE=xe
+     DB_USERNAME=system
+     DB_PASSWORD=oracle
+     ```
 5. Generate the local application key:
    ```bash
    php artisan key:generate
