@@ -1,4 +1,4 @@
-# Local Artisan & Repair Service Booking
+# BricoLink Service Booking
 
 ## Project Overview
 This platform serves as the source of truth for the local artisan and repair service booking system. It is composed of a single REST API base serving web, and eventually a Phase 2 Flutter application.
