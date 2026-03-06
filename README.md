@@ -57,3 +57,7 @@ For our team of 5, the established Git workflow must be strictly adhered to:
    ```bash
    php artisan serve
    ```
+   *Note: If you encounter an Oracle OCI8 extension error or `ORA-12541` when running the standard serve command due to your CLI environment using a different PHP binary, you can force Laravel to use your system's global PHP binary instead:*
+   ```bash
+   PHP_BINARY=/usr/bin/php /usr/bin/php artisan serve --host=0.0.0.0 --port=8080
+   ```
